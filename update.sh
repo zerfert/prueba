@@ -1,4 +1,3 @@
-
 #!/bin/bash
 # Moodle installation script
 #by draft04
@@ -57,21 +56,21 @@ done
 apt-get -y -qq update
 apt-get -y -qq upgrade
 
-apt-get -y -qq install php php-mysql libapache2-mod-php \
-php-gd php-mbstring php-xml php-zip php-intl \
-php-xmlrpc php-soap php-curl php-fileinfo php-json \
-php-mysqli php-simplexml php-xml php-cli php-common \
-php-imap php-ldap php-cas php-dev php-pear php-imagick \
-php-bcmath php-opcache php-apcu php-apcu-bc
+#apt-get -y -qq install php php-mysql libapache2-mod-php \
+#php-gd php-mbstring php-xml php-zip php-intl \
+#php-xmlrpc php-soap php-curl php-fileinfo php-json \
+#php-mysqli php-simplexml php-xml php-cli php-common \
+#php-imap php-ldap php-cas php-dev php-pear php-imagick \
+#php-bcmath php-opcache php-apcu php-apcu-bc
 
-systemctl restart apache2
-pecl channel-update pecl.php.net
-pecl install apcu
+#systemctl restart apache2
+#pecl channel-update pecl.php.net
+#pecl install apcu
 #echo "extension=apcu.so" >> `php --ini | grep "Loaded Configuration" | sed -e "s|.*:\s*||"`
-phpenmod pdo_mysql
+#phpenmod pdo_mysql
 
 
-service apache2 restart
+#service apache2 restart
 upgrade_date=$(date +%d-%m-%y)
 old_moodle_dir=/var/www/html/campus-$upgrade_date
 
