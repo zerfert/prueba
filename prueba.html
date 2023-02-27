@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('https://fondosmil.com/fondo/35293.jpg');
+      }
+      h1{
+        color: white;
+        text-shadow: 2px 2px 2px;
+      }
+      h3{
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Chabot Educativo</h1>
+    <h3>Este es un Chatbot creado especificamente un curso de Ingenieria de software.</h3>
+    <script>!(function () {
+        let e = document.createElement("script"),
+          t = document.head || document.getElementsByTagName("head")[0];
+        (e.src =
+          "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+          (e.async = !0),
+          (e.onload = () => {
+            window.WebChat.default(
+              {
+                initPayload: "/saludar",
+                customData: { language: "es" },
+                socketUrl: "http://192.168.100.85:5005",
+                title: "Chabot Educativo",
+                showFullScreenButton: true,
+                storage: "session"
+              },
+              null
+            );
+          }),
+          t.insertBefore(e, t.firstChild);
+      })();
+      </script>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  </body>
+</html>
