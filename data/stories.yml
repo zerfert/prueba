@@ -1,0 +1,111 @@
+version: "3.1"
+
+stories:
+
+- story: camino_feliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar 
+  - intent: afirmar
+  - action: utter_feliz
+  - intent: ayuda
+  - action: utter_ayuda
+  
+- story: camino_infeliz
+  steps:
+  - intent: saludar
+  - action: utter_saludar 
+  - intent: negar
+  - action: utter_animo
+  - intent: ayuda
+  - action: utter_ayuda
+
+- story: camino_despues_de_despistar_true
+  steps:
+  - intent: despistar
+  - action: utter_despistar
+  - intent: afirmar
+  - action: utter_ayuda
+
+- story: camino_despues_de_despistar_false
+  steps:
+  - intent: despistar
+  - action: utter_despistar
+  - intent: negar
+  - action: utter_parar
+  
+- story: camino_apoyo_adopcion
+  steps:
+  - intent: ayuda_adopcion
+  - action: utter_ayuda_adopcion
+  
+- story: camino_agradecer
+  steps:
+  - intent: agradecer
+  - action: utter_de_nada
+  
+- story: camino_reinicio
+  steps:
+  - intent: reinicio
+  - action: utter_reinicio
+  
+- story: camino_ayuda
+  steps:
+  - intent: ayuda
+  - action: utter_ayuda
+  
+- story: camino_detener
+  steps:
+  - intent: parar
+  - action: utter_parar
+  
+- story: interactive_story_1
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: afirmar
+  - action: utter_feliz
+  - intent: ayuda
+  - action: utter_ayuda
+  - intent: ayuda_adopcion
+  - action: utter_ayuda_adopcion
+  - intent: agradecer
+  - action: utter_de_nada
+  - intent: reinicio
+  - action: utter_reinicio
+  - intent: agradecer
+  - action: utter_de_nada
+  - intent: parar
+  - action: utter_parar
+  - intent: reinicio
+  - action: utter_reinicio
+  - intent: saludar
+  - action: utter_saludar
+  - intent: parar
+  - action: utter_parar
+  - intent: despistar
+  - action: utter_despistar
+  - intent: ayuda_adopcion
+  - action: utter_ayuda_adopcion
+  - intent: parar
+  - action: utter_parar
+  - intent: despedir
+  - action: utter_despedir
+  - intent: agradecer
+  - action: utter_de_nada
+  - intent: parar
+  - action: utter_parar
+  
+- story: interactive_story_1
+  steps:
+  - intent: reinicio
+  - action: utter_reinicio
+
+- story: interactive_story_1
+  steps:
+  - intent: saludar
+  - action: utter_saludar
+  - intent: info
+  - action: action_info
+  - intent: youtube
+  - action: action_youtube

@@ -1,0 +1,91 @@
+version: '3.1'
+intents:
+- afirmar
+- agradecer
+- ayuda
+- ayuda_adopcion
+- charla
+- clima
+- despedir
+- despistar
+- documentos
+- info
+- negar
+- parar
+- qr
+- reinicio
+- reto_bot
+- saludar
+- url
+- youtube
+entities:
+- cciudad
+- LOC
+slots:
+  cciudad:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: LOC
+responses:
+  utter_saludar:
+  - text: ¡Oye! ¿Cómo estás? 👋
+  - text: ¡hola! ¿Cómo estás? 👋
+  - text: Hola, en que puedo ayudarte 👋
+  - text: Hola, Bienvenido en que puedo ayudarte 👋
+  utter_animo:
+  - text: Ey! todo estara bien mira 🥺
+    image: https://images7.memedroid.com/images/UPLOADED272/62c890a7594f6.webp
+  - text: Mucho animo si se puede 🥺
+  - text: no te preocupes todo va mejorar🥺
+  utter_ayuda:
+  - text: En que puedo ayudar ? 🫡
+  - text: En que necesitas que te ayude 🫡
+  - text: si necesitas mi ayuda solo dime 🫡
+  - text: No te preocupes, yo te puedo ayudar, dime que necesitas 🫡
+  utter_feliz:
+  - text: ¡Genial, me alegro por ti continúa! 😊
+  - text: ¡excelente 😊, me encata saber eso!
+  - text: ¡excelente 😊, super sigue asi!
+  - text: ¡excelente 😊, mucho animo !
+  utter_despedir:
+  - text: Adiós, que tengas buen día. 🤜
+  - text: Adiós, exitos. 🤜
+  - text: Adiós, buen resto de día. 🤜
+  utter_reto_bot:
+  - text: Yo soy un robot desarollado por ... no me acuerdo no me termino de programar 🤖
+  - text: No fue facil pero soy un robot 🤖
+  - text: Soy una inteligencia artificial 🤖
+  utter_despistar:
+  - text: Eh! te puedo ayudar en algo 🤔
+  - text: Necesitas alguna informacion 🤔
+  - text: tienes algo que preguntarme 🤔
+  - text: podemos hablar de algo... 🤔
+  utter_parar:
+  - text: Perdon! hare silencio... 🤫
+  utter_de_nada:
+  - text: De nada fue un placer 👍
+  utter_reinicio:
+  - text: Me estoy Reiniciando... 😂
+  utter_ayuda_adopcion:
+  - text: 'Muchas gracias por querer ayudar a muchas animales, si quieres ayudar con la adopcion de un mascota o dar un pequeño apoyo te recomiendo una de estas fundaciones: @fundacionalmaperruna y @rescatandoangelesconcolita siguelas en todas las redes sociales esto tambien es de ayuda 🐶💞🐱.'
+actions:
+- action_clima
+- action_documentos
+- action_enlace
+- action_info
+- action_qr
+- action_youtube
+- utter_animo
+- utter_ayuda
+- utter_ayuda_adopcion
+- utter_de_nada
+- utter_despedir
+- utter_despistar
+- utter_feliz
+- utter_parar
+- utter_reinicio
+- utter_saludar
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
